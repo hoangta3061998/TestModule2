@@ -50,12 +50,15 @@ public class StudentManager {
             }
         }
         if (validId) {
+            //Xóa sinh viên bằng cách gán sinh viên đứng sau cho sinh viên đứng trước
             for (int i = tempIndex; i < list.length - 1; i++) {
                 list[i] = list[i + 1];
             }
+            //Copy danh sách cũ cho danh sách mới có kích thước nhỏ hơn
             for (int i = 0; i < tempList.length; i++) {
                 tempList[i] = list[i];
             }
+            //Gán danh sách mới cho danh sách cũ
             list = tempList;
         } else {
             System.out.println("Invalid ID");
@@ -77,7 +80,7 @@ public class StudentManager {
 
     public void ShowStudent() {
         for (int i = 0; i < list.length; i++) {
-            System.out.println(list[i].getId() + "\t" + list[i].getName() + "\t" + list[i].getAge() + "\t" + list[i].getAddress() + "\t" + list[i].getGpa());
+            System.out.printf("%d \t %s \t %d \t %s \t %f \n",list[i].getId(),list[i].getName(),list[i].getAge(),list[i].getAddress(),list[i].getGpa());
         }
     }
 }

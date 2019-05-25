@@ -61,7 +61,7 @@ public class Main {
                     break;
                 case 5:
                     System.out.println("Students List:");
-                    System.out.println("Id \t Name \t Age \t Address \t GPA");
+                    System.out.printf("%s \t %s \t %s \t %s \t %s \n","ID","Name","Age","Address","GPA");
                     manager.ShowStudent();
                     break;
                 case 0:
